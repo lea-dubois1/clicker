@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
-    <title>Document</title>
+    <?php require_once '_include/head.php' ?>
+    <script src="_include/script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+    <title>Home</title>
 </head>
+
 <body>
+    
+    <?php require_once '_include/header.php' ?>
+    <?php if($_SESSION){header('Location: game.php');} ?>
+    <?php require_once 'classes/User.php' ?>
 
-    <?php if (session_status() == PHP_SESSION_NONE){ session_start();} ?>
+    <main>
 
-    <button id="switchInscription">Signup</button>
-    <button id="switchConnexion">Login</button><br><br>
+        <div id="bonjour">Bonjour user</div>
 
-    <div id="form">Bonjour <?php if($_SESSION){echo '&nbsp' . strtoupper($_SESSION['prenom']);}else{echo 'user';}?></div>
+        <div id="buttons">
+            <button id="switchInscription">Signup</button>
+            <button id="switchConnexion">Login</button><br><br>
+        </div>
+
+        <div id="form"></div>
+
+    </main>
+
+    <?php require_once '_include/footer.php' ?>
 
 </body>
+
 </html>
