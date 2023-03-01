@@ -115,7 +115,7 @@ class User
             }
             
         }else{
-            $messages['errorLogin'] = 'The login do not exist. You don\'t have an account? <a href=\"inscription.php\">Signup</a>';
+            $messages['errorLogin'] = 'The login do not exist. If you don\'t have an account, please signup.';
         }
 
         $json = json_encode($messages, JSON_PRETTY_PRINT);

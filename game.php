@@ -14,11 +14,11 @@
 
     <main>
 
-        <div id="displayClicks">
-            <p id="nbClicks">0</p><p>&#160 clicks</p>
+        <div id="displayPoints">
+            <p id="nbPoints">0</p><p>&#160 points</p>
         </div>
 
-        <button id="addClickButton">Click</button>
+        <button id="addPointButton">Click</button>
 
     </main>
 
