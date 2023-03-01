@@ -1,16 +1,39 @@
 function addClickValue(nbToAdd) {
+    
+    let clickValue = parseInt(localStorage.getItem('clickValue'));
 
-    clickValue += nbToAdd;
-    localStorage.setItem('clickValue', clickValue);
+    let clickValueTemp = clickValue + nbToAdd;
+    localStorage.setItem('clickValue', clickValueTemp);
 
 }
 
 function addSecValue(nbToAdd) {
+    
+    let secValue = parseInt(localStorage.getItem('secValue'));
+    let secValueTemp = secValue + nbToAdd;
 
-    secValue += nbToAdd;
-    localStorage.setItem('secValue', secValue);
+    localStorage.setItem('secValue', secValueTemp);
 
 }
+
+
+function addEachSec() {
+    
+    let secValue = parseInt(localStorage.getItem('secValue'));
+    let nbPoints = parseInt(localStorage.getItem('nbPoints'));
+    let nbPointsTemp = nbPoints + secValue;
+    
+    localStorage.setItem('nbPoints', nbPointsTemp);
+
+}
+
+function displayEachSec() {
+
+    let nbPoints = parseInt(localStorage.getItem('nbPoints'));
+    nbPointsDisplay.textContent = nbPoints;
+
+}
+
 
 function whenClickDo() {
 
@@ -25,13 +48,39 @@ function whenClickDo() {
 
 }
 
+function whenClickAchatClickValue() {
 
-let nbPointsTempSec;
+    
+    
+}
+
+function whenClickAchatSecValue() {
+    
+}
+
+
+let nbPoints = parseInt(localStorage.getItem('nbPoints'));
+
+let prixAchatClickValue = parseInt(localStorage.getItem('prixAchatClickValue'));
+let prixAchatSecValue = parseInt(localStorage.getItem('prixAchatSecValue'));
+
+let gainAchatClickValue = parseInt(localStorage.getItem('gainAchatClickValue'));
+let gainAchatSecValue = parseInt(localStorage.getItem('gainAchatSecValue'));
+
 const nbPointsDisplay = document.getElementById('nbPoints');
 const addPointButton = document.getElementById('addPointButton');
 
+const displayPrixAchatClick = document.getElementById('prixAchatClickValue');
+const displayGainAchatClick = document.getElementById('gainAchatClickValue');
+const achatClickValueButton = document.getElementById('buttonAchatClickValue');
+
+const displayPrixAchatSec = document.getElementById('prixAchatSecValue');
+const displayGainAchatSec = document.getElementById('gainAchatSecValue');
+const achatSecValueButton = document.getElementById('buttonAchatSecValue');
+
+
 localStorage.setItem('clickValue', '1')
-localStorage.setItem('secValue', '0')
+localStorage.setItem('secValue', '1')
 
 nbPointsDisplay.textContent = nbPoints;
 
@@ -39,11 +88,38 @@ nbPointsDisplay.textContent = nbPoints;
 // console.log(typeof parseInt(localStorage.getItem('clickValue')));
 // console.log(isNaN(parseInt(localStorage.getItem('clickValue'))));
 
-if(isNaN(nbPoints) == true) {
+
+if(isNaN(nbPoints) === true || nbPoints === null) {
     localStorage.setItem('nbPoints', '0');
     nbPointsDisplay.textContent = parseInt(localStorage.getItem('nbPoints'));
-}else {
-    nbPointsDisplay.textContent = parseInt(localStorage.getItem('nbPoints'));
+}
+
+
+if(isNaN(prixAchatClickValue) === true || prixAchatClickValue === null) {
+
+    localStorage.setItem('prixAchatClickValue', '10');
+    displayPrixAchatClick.textContent = parseInt(localStorage.getItem('prixAchatClickValue'));
+    
+}
+if(isNaN(gainAchatClickValue) === true || gainAchatClickValue === null) {
+
+    localStorage.setItem('gainAchatClickValue', '1');
+    displayGainAchatClick.textContent = parseInt(localStorage.getItem('gainAchatClickValue'));
+    
+}
+
+
+if(isNaN(prixAchatSecValue) === true || prixAchatSecValue === null) {
+
+    localStorage.setItem('prixAchatSecValue', '20');
+    displayPrixAchatSec.textContent = parseInt(localStorage.getItem('prixAchatSecValue'));
+    
+}
+if(isNaN(gainAchatSecValue) === true || gainAchatSecValue === null) {
+
+    localStorage.setItem('gainAchatSecValue', '0,1');
+    displayGainAchatSec.textContent = parseInt(localStorage.getItem('gainAchatSecValue'));
+    
 }
 
 
@@ -53,20 +129,18 @@ addPointButton.addEventListener('click', () => {
     
 });
 
+achatClickValueButton.addEventListener('click', () => {
+
+    whenClickAchatClickValue();
+    
+});
+
+achatSecValueButton.addEventListener('click', () => {
+
+    whenClickAchatSecValue();
+    
+});
 
 
-
-
-
-
-// function test() {
-//     nbPointsTempSec = nbPoints + secValue;
-//     localStorage.setItem('nbPoints', nbPointsTemp);
-// }
-
-// function displayEachSec() {
-//     nbPoints = parseInt(localStorage.getItem('nbPoints'));
-//     nbPointsDisplay.textContent = nbPoints;
-// }
-
-// setInterval(test,displayEachSec, 1000)
+setInterval(addEachSec, 1000);
+setInterval(displayEachSec, 1000);
