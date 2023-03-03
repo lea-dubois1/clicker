@@ -29,6 +29,7 @@ function displayErrorsSignup(dataJSON) {
     if(dataJSON['okReg']) {
 
         alert(dataJSON['okReg']);
+        
     }
 
 }

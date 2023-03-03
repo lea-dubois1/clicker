@@ -1,3 +1,112 @@
+body {
+    background-image: url(../images/fond1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgba(56, 29, 0, 0.5);
+    height: 9vh;
+    color: rgb(239, 223, 182);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 60vw;
+    font-size: xx-large;
+}
+
+header li {
+    color: rgb(239, 223, 182);
+    height: 100%;
+}
+
+header a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: rgba(46, 0, 46, 0.5);
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(223, 129, 223);
+    font-size: x-large;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 85vh;
+}
+
 .uneLigne {
     display: flex;
+}
+
+#boutique {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin-top: 5vh;
+}
+
+#clickPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+img {
+    height: 25vh;
+    width: fit-content;
+}
+
+.imgSmall {
+    height: 17vh;
+}
+
+#achatSecValue, #achatClickValue {
+    background-color: rgba(59, 37, 10, 0.6);
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    padding: 1%;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 5px;
+    color: antiquewhite;
+    font-size: larger;
+}
+
+#buttonAchatClickValue, #buttonAchatSecValue {
+    margin: 10px;
+    padding: 5px;
+    font-size: 18px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+#displayPointsP, #nbPoints{
+    font-size: 30px;
+    font-weight: bolder;
+    color: rgb(40, 23, 0);
+    backdrop-filter: blur(1px);
 }

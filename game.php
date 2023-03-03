@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php require_once '_include/head.php' ?>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/style.css"/>
     <link rel="stylesheet" type="text/css" href="styles/game.css"/>
     <script src="_include/game.js" defer></script>
@@ -14,43 +16,51 @@
 
     <main>
 
-        <div class="uneLigne">
-            <p id="nbPoints">0</p><p>&#160points</p>
-        </div>
+        <div id="clickPart">
 
-        <button id="addPointButton">Click</button>
+            <img id="addPointButton" src="images/primo.webp" alt="">
+
+            <div class="uneLigne">
+                <p id="nbPoints">0</p><p>&#160</p><p id="displayPointsP">&#160Genshin points</p>
+            </div>
+
+        </div>
 
         <div id="boutique">
 
             <div id="achatClickValue">
 
-                <div class="uneLigne">
-                    <p>Prix :&#160</p><p id="prixAchatClickValue"></p>
-                </div>
-
-                <p>Multiclick</p>
+                <img class="imgSmall" src="images/voeuViolet.avif" alt="">
 
                 <div class="uneLigne">
-                    <p>+&#160</p><p id="gainAchatClickValue">1</p><p>&#160point/click</p>
+                    <p>Prix :&#160</p><p id="prixAchatClickValue">20</p>
                 </div>
 
-                <button id="buttonAchatClickValue">Achat</button>
+                <p>Wish</p>
+
+                <div class="uneLigne">
+                    <p id="gainAchatClickValue">2</p><p>&#160points/click</p>
+                </div>
+
+                <button id="buttonAchatClickValue">Buy</button>
 
             </div>
 
             <div id="achatSecValue">
 
-                <div class="uneLigne">
-                    <p>Prix :&#160</p><p id="prixAchatSecValue">10</p>
-                </div>
-
-                <p>Idleclick</p>
+                <img class="imgSmall" src="images/carte.webp" alt="">
 
                 <div class="uneLigne">
-                    <p>+&#160</p><p id="gainAchatSecValue">0.1</p><p>&#160point/sec</p>
+                    <p>Prix :&#160</p><p id="prixAchatSecValue">50</p>
                 </div>
 
-                <button id="buttonAchatSecValue">Achat</button>
+                <p>Welkin blessing</p>
+
+                <div class="uneLigne">
+                    <p id="gainAchatSecValue">0.3</p><p>&#160points/sec</p>
+                </div>
+
+                <button id="buttonAchatSecValue">Buy</button>
 
             </div>
 

@@ -3,7 +3,7 @@
 
 <header>
 
-    <h1>Clicker</h1>
+    <h1>Genshin Clicker</h1>
 
     <nav>
             
