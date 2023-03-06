@@ -17,7 +17,7 @@
 
     <main>
 
-        <div id="bonjour">Bonjour user</div>
+        <div id="bonjour">Bienvenu sur Genshin Clicker</div>
 
         <div id="buttons">
             <button id="switchInscription">Signup</button>

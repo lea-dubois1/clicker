@@ -11,5 +11,3 @@
     <div id="okConn"></div>
 
 </form>
-
-<output id="output"></output>
