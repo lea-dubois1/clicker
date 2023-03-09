@@ -61,17 +61,21 @@ function displayErrorsSignin(dataJSON) {
 const inscriptionButton = document.getElementById('switchInscription');
 const connexionButton = document.getElementById('switchConnexion');
 const switchButton = document.getElementById('switch');
+const divForm = document.getElementById('form');
+
+console.log(divForm)
+console.log(switchButton)
+
 
 inscriptionButton.addEventListener('click', () => {
 
-    //call the php inscription file
     fetch('_include/inscription.php')
     .then((promise)=>{
         return promise.text();
     })
     .then((content)=>{
-        const form = document.getElementById('form');
-        form.innerHTML = content;
+		console.log(content)
+        divForm.innerHTML = content;
         const signupForm = document.getElementById('signupForm');
 
         signupForm.addEventListener('submit', (e) => {
@@ -115,8 +119,7 @@ connexionButton.addEventListener('click', ()=>{
         return promise.text();
     })
     .then((content)=>{
-        const form = document.getElementById('form');
-        form.innerHTML = content;
+        divForm.innerHTML = content;
         const signinForm = document.getElementById('signinForm');
 
         signinForm.addEventListener('submit', (e) => {
